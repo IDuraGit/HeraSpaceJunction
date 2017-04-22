@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HERASPACE</title>
+</head>
+<body>
+
+	<center>
+		<h2 color="blue">HERASPACE - Dynamic forecasting of fishing routes</h2>
+	</center>
+
+
+
+	<form action="HeraSpaceDataCrosser" method="GET">
+
+		<h3>Please choose the needs of your captures campaign</h3>
+		<h4>1.)Which typology of seafood are you searching for?:</h4>
+
+
+		<input type="checkbox" name="fishType" value="tuna">Tuna 
+			<input
+			type="checkbox" name="fishType" value="octopus">Octopus 
+			
+			<input
+			type="checkbox" name="fishType" value="schrimps">Schrimps 
+			
+			<input
+			type="checkbox" name="fishType" value="mullet">Mullet 
+			
+			<input
+			type="checkbox" name="fishType" value="lobster">Lobster 
+			
+			<input
+			type="submit" name="send" value="send">
+
+		<h4>2.)In which dates would you like to operate?:</h4>
+
+		
+
+
+
+
+	</form>
+
+
+
+
+
+
+
+	<center>
+		<h2>HERASPACE - OData Sentinel 3 Satellite Sample Project</h2>
+	</center>
+
+	<div align="left">
+		<ul>
+			<li>
+					<h4>Satellite Data Near Real Time (3 hours from sensing)</h4>
+			 <br>
+				<ul>
+					<li><a href="https://coda.eumetsat.int/odata/v1">OData
+							Service Root URI for the CODA Web Service</a></li>
+					<li><a
+						href="https://coda.eumetsat.int/odata/v1/Products?$format=xml">List
+							of satellite products in XML format </a></li>
+					<li><a href="https://coda.eumetsat.int/odata/v1/$metadata">List
+							of satellite products metadata</a></li>
+					<li><a href="https://coda.eumetsat.int/odata/v1/Products">List
+							of satellite 50 products </a></li>
+					<li><a
+						href="https://coda.eumetsat.int/odata/v1/Products('5f631f99-47e4-4540-9d1d-58d9e85135e9')">Getting
+							a single products </a></li>
+					<li><a
+						href="https://coda.eumetsat.int/odata/v1/Products?$filter=year(IngestionDate) eq 2017 and month(IngestionDate) eq 04">Getting
+							products retrieved on April 2017</a></li>
+
+					<li><a
+						href="https://coda.eumetsat.int/odata/v1/Products?$filter=IngestionDate gt datetime'2017-04-21T00:00:00'">Satellite
+							products retrieved when Ultrahack started til now</a></li>
+
+					<li><a
+						href="https://coda.eumetsat.int/odata/v1/Products('5f631f99-47e4-4540-9d1d-58d9e85135e9')/$value">Download
+							a Sentinel 3 satellite full product from its UUID</a></li>
+
+
+
+				</ul></li>
+
+		</ul>
+	</div>
+
+
+</body>
+</html>

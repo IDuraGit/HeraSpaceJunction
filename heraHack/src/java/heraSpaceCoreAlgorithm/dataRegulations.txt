@@ -1,0 +1,6 @@
+slot1,free,tunaAllowed
+slot1,free,tunaNotAllowed
+slot1,free,octopusAllowed
+slot1,free,octopusNotAllowed
+slot1,free,schrimpAllowed
+slot1,free,schrimpNotAllowed
