@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic tile map</title>
+        <link rel="stylesheet" href="https://ramani.ujuizi.com/api/v.0.2/ramani.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+
+
+        <script src="https://ramani.ujuizi.com/api/v.0.2/ramani.min.js"></script>
+        <style>
+            #map { position:absolute; top:0; bottom:0; width:100%; }
+
+        </style>
+    </head>
+    <body>
+        <input type="text" id="search">
+        <div style="width: 100%;height: 500px;" id="map"></div>
+    </body>
+    <script>
+
+        var rc = new RamaniAPI();
+        rc.init({
+            username: 'isaacdura',
+            apiKey: 'fa46549a657ef2c2499caa637d99285f',
+            package: 'ddl.dataset-topaz4-bio-nat-myoceanv2-be.chla'
+        });
+        var map = rc.map({
+            center: new L.LatLng(49.27497287599639, 2.867431640625),
+            baselayer: 'osm'
+        });
+
+        var coordinatesArray = new Array('6.414642333984374', '52.36218321674427', '6.414642333984374', '60.36218321674427');
+
+        var transect = rc.getTransect(coordinatesArray, {layer: 'ddl.simS5seriesForAirQualityEuro.o3conc', info_format: 'text / json'});
+
+      
+        var params1 = {db: "isaacdura", layer: 'ddl.s2cloudless3857', opacity: 1};
+        var params2 = {db: "isaacdura", layer: 'ddl.forS3seriesBioArcticDaily.chla'};
+
+        //Cross data in one single layer
+
+        rc.mapsSwipe(params1, params2);
+
+
+
+    </script>
+</html>
